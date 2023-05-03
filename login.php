@@ -13,7 +13,7 @@ if(isset($_POST['submit'])){
     if(mysqli_num_rows($select) > 0){
         $row = mysqli_fetch_assoc($select);
         $_SESSION['user_id'] = $row['id'];
-        header('location:home.php');
+        header('location:index.php');
     }else{
         $message[] = 'incorrect email or password!';
     }
@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Inicio de sesion</title>
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
@@ -39,7 +39,7 @@ if(isset($_POST['submit'])){
 <div class="form-container">
 
     <form action="" method="post" enctype="multipart/form-data">
-        <h3>login now</h3>
+        <h3>Inicia sesion ahora</h3>
         <?php
         if(isset($message)){
             foreach($message as $message){
@@ -50,7 +50,7 @@ if(isset($_POST['submit'])){
         <input type="email" name="email" placeholder="enter email" class="box" required>
         <input type="password" name="password" placeholder="enter password" class="box" required>
         <input type="submit" name="submit" value="login now" class="btn">
-        <p>don't have an account? <a href="register.php">regiser now</a></p>
+        <p>¿No tienes una cuenta?  <a href="register.php">registrate ahora</a></p>
     </form>
 
 </div>

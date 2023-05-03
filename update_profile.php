@@ -54,7 +54,7 @@ if(isset($_POST['update_profile'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>update profile</title>
+    <title>Actualizar perfil</title>
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
@@ -86,25 +86,25 @@ if(isset($_POST['update_profile'])){
         ?>
         <div class="flex">
             <div class="inputBox">
-                <span>username :</span>
+                <span>usuario :</span>
                 <input type="text" name="update_name" value="<?php echo $fetch['name']; ?>" class="box">
-                <span>your email :</span>
+                <span>tu correo :</span>
                 <input type="email" name="update_email" value="<?php echo $fetch['email']; ?>" class="box">
-                <span>update your pic :</span>
+                <span>actualiza tu avatar :</span>
                 <input type="file" name="update_image" accept="image/jpg, image/jpeg, image/png" class="box">
             </div>
             <div class="inputBox">
                 <input type="hidden" name="old_pass" value="<?php echo $fetch['password']; ?>">
-                <span>old password :</span>
+                <span>contraseña actual :</span>
                 <input type="password" name="update_pass" placeholder="enter previous password" class="box">
-                <span>new password :</span>
+                <span>nueva contraseña :</span>
                 <input type="password" name="new_pass" placeholder="enter new password" class="box">
-                <span>confirm password :</span>
+                <span>confirma tu contraseña :</span>
                 <input type="password" name="confirm_pass" placeholder="confirm new password" class="box">
             </div>
         </div>
         <input type="submit" value="update profile" name="update_profile" class="btn">
-        <a href="home.php" class="delete-btn">go back</a>
+        <a href="index.php" class="delete-btn">Regresar</a>
     </form>
 
 </div>

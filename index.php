@@ -22,7 +22,7 @@ $user_id = $_SESSION['user_id'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
+    <title>Inicio - Administrador de perfiles</title>
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
@@ -46,7 +46,7 @@ $user_id = $_SESSION['user_id'];
         ?>
         <h3><?php echo $fetch['name']; ?></h3>
         <a href="update_profile.php" class="btn">actualizar perfil</a>
-        <a href="home.php?logout=<?php echo $user_id; ?>" class="delete-btn">cerrar sesion</a>
+        <a href="index.php?logout=<?php echo $user_id; ?>" class="delete-btn">cerrar sesion</a>
         <p>nuevo <a href="login.php">iniciar sesion</a> o <a href="register.php">registrarse</a></p>
     </div>
 
